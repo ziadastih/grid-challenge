@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500&display=swap");
+:root {
+  --Moderateviolet: hsl(263, 55%, 52%);
+  --Verydarkgrayishblue: hsl(217, 19%, 35%);
+  --Verydarkblackishblue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  /* ---------text------------ */
+  --Lightgray: hsl(0, 0%, 81%);
+  --Lightgrayishblue: hsl(210, 46%, 95%);
+  --font: "Barlow Semi Condensed", sans-serif;
+}
+body {
+  font-size: 62.5%;
+  line-height: 1.5;
+  background-color: var(--Lightgrayishblue);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+h2 {
+  font-family: var(--font);
+  font-size: 1.2em;
+  color: var(--White);
+  margin-bottom: 20px;
+}
+h3 {
+  font-family: var(--font);
+  font-size: 1.2em;
+  color: var(--Verydarkblackishblue);
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+p {
+  font-family: var(--font);
+  color: var(--Lightgray);
+}
+/* ======setting the grid------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+  margin-inline: auto;
+  width: min(95%, 70rem);
+
+  gap: 1.5rem;
+}
+
+.column1 {
+  padding: 20px;
+  background-color: var(--Moderateviolet);
+
+  border-radius: 10px 10px 10px 10px;
+}
+.column1 {
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  /* setting image inside another background woth exact positioning */
+  background-position: top right 10%;
+}
+
+.column1 a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1em;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.column1 img {
+  border-radius: 50%;
+  width: 30px;
+  border: 1px solid var(--White);
+}
+/* ======column2======== */
+.column2 {
+  padding: 20px;
+  background-color: var(--Verydarkgrayishblue);
+
+  border-radius: 10px 10px 10px 10px;
+}
+
+.column2 a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1em;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.column2 img {
+  border-radius: 50%;
+  width: 30px;
+  border: 1px solid var(--White);
+}
+/* =================column 3====== */
+.column3 {
+  padding: 20px;
+  background-color: var(--White);
+
+  border-radius: 10px 10px 10px 10px;
+}
+.column3 p {
+  color: var(--Verydarkgrayishblue);
+}
+
+.column3 a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1em;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.column3 img {
+  border-radius: 50%;
+  width: 30px;
+  border: 1px solid var(--White);
+}
+/* ============column 4========= */
+.column4 {
+  padding: 20px;
+  background-color: var(--Verydarkblackishblue);
+
+  border-radius: 10px 10px 10px 10px;
+}
+
+.column4 a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1em;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.column4 img {
+  border-radius: 50%;
+  width: 30px;
+  border: 1px solid var(--White);
+}
+/* ============column4======== */
+.column5 {
+  padding: 20px;
+  background-color: var(--White);
+  border-radius: 10px 10px 10px 10px;
+}
+.column5 p {
+  color: var(--Verydarkgrayishblue);
+}
+
+.column5 a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1em;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.column5 img {
+  border-radius: 50%;
+  width: 30px;
+  border: 1px solid var(--White);
+}
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid-col-span-2 {
+    grid-column-start: span 2;
+  }
+  .column5 {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
+}
+/* ========done with it the typical way still font details and figma sheet not available to do it more accurate=========== */
+/* =====check  */
